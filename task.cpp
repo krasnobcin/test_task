@@ -97,8 +97,6 @@ double dispersion(const vector<double> &v){
 int main(){
     freopen("result.csv","w",stdout);
     for (int i = 0;i<51;++i){
-/*         string filename = "output" + to_string(i)+".csv";
-        freopen(filename.c_str(),"w",stdout); */
         vector<double> v = get_vector(generator(i),2);
         cout<<i<<' '<<dispersion(v)<<'\n';
     }
