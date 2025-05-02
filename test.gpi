@@ -1,0 +1,15 @@
+#!/usr/bin/gnuplot -persist
+
+set terminal postscript eps enhanced color solid
+set output "result.ps"
+
+set datafile separator ' '
+set grid xtics ytics
+
+set ylabel "dispersion"
+set xlabel "f"
+
+set yrange[-1:110]
+
+plot "result.csv" with lines title ""
+
