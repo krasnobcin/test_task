@@ -85,12 +85,12 @@ double average(const vector<double> &v){
     return res;
 }
 
-double dispersion(const vector<double> &v){
+double MSE(const vector<double> &v){
     double res = 0;
     double avg = average(v);
     for (double e: v)
         res+=(e-avg)*(e-avg);
-    res/=(v.sz()-1);
+    res/=(v.sz());
     return res;
 }
 
@@ -98,7 +98,7 @@ int main(){
     freopen("result.csv","w",stdout);
     for (int i = 0;i<51;++i){
         vector<double> v = get_vector(generator(i),2);
-        cout<<i<<' '<<dispersion(v)<<'\n';
+        cout<<i<<' '<<MSE(v)<<'\n';
     }
 
     return 0;
